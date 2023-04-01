@@ -141,6 +141,7 @@ header {
   color: #fff;
   background-color: #3b4050;
   padding: 1em 0 2em 0;
+  font-size: 1.25em;
 }
 
 .hero__title {
@@ -151,7 +152,7 @@ header {
 }
 
 .hero__title span {
-  color: #A59678;
+  color: #a59678;
 }
 
 .hero__text {
@@ -161,6 +162,31 @@ header {
 .hero__text--button {
   font-family: 'Oswald';
   text-transform: uppercase;
+}
+
+.section-one {
+  padding: 4em 0 1em 0;
+  background-color: #f2f2f2;
+}
+
+.section-one__item {
+  margin-bottom: 3em;
+}
+.section-one__title {
+  font-family: 'Oswald';
+  font-size: 1.55em;
+  color: #a59678;
+}
+
+.section-one__text,
+.section-one__title {
+  text-align: center;
+}
+
+.section-one__text {
+  font-size: 0.95em;
+  max-width: 500px;
+  margin: 0 auto;
 }
 
 @media (min-width: 700px) {
@@ -186,27 +212,34 @@ header {
     margin: 0 0 0 1em;
   }
 
-  .hero {
+  .hero,
+  .section-one {
     padding: 3em 0;
   }
 
   .hero__title {
-    width: 40%; 
+    width: 40%;
   }
-  .hero__text--container  {
-   width: 40%;
-   padding-top: 1.8em;
+  .hero__text--container {
+    width: 50%;
+    padding-top: 3.8em;
+  }
+  .section-one__item {
+    width: 33%;
+    margin-bottom: 0;
+  }
+  .section-one__text {
+    padding: 0 1em;
   }
 }
 
 @media (min-width: 1000px) {
-  .hero {
+  .hero,
+  .section-one {
     padding: 4em 0;
   }
-  /* .hero__title {
-    width: 39%; 
-  } */
-  .hero__text--container  {
+
+  .hero__text--container {
     width: 50%;
     padding-top: 4em;
   }
