@@ -24,7 +24,9 @@ h3,
 h4,
 h5,
 h6,
-p {
+p,
+ol,
+ul {
   margin: 0;
 }
 
@@ -162,16 +164,18 @@ header {
 }
 
 .section-one {
-  padding: 4em 0 1em 0;
+  padding: 4em 1.5em;
   background-color: #f2f2f2;
 }
 
-.section-one__item {
+.section-one__item + .section-one__item {
+  margin-top: 3em;
 }
 .section-one__title {
   font-family: 'Oswald';
   font-size: 1.55em;
   color: #a59678;
+  margin-bottom: 0.75em;
 }
 
 .section-one__text,
@@ -181,8 +185,8 @@ header {
 
 .section-one__text {
   font-size: 0.95em;
-  max-width: 500px;
-  margin: .75em auto 2.5em auto;
+  max-width: 500px;/* 
+  margin: .75em auto 2.5em auto; */
 }
 
 .section-two {
@@ -202,7 +206,7 @@ header {
 
 .section-two__card {
   color: #FFF;
-  background-color: #2E323F;
+  background-color: #3B4050;
   text-align: center;
   padding: 2em;
   max-width: 400px;
@@ -213,6 +217,38 @@ header {
 
 .flow > * {
   margin: 2em auto 0 auto;
+}
+
+.section-three {
+  padding: 4em 0;
+  margin-top: 2em;
+  background-color: #2E323F;
+  color: #6F737F;
+  text-transform: capitalize;  
+}
+
+
+.section-three__title {
+  font-family: 'Oswald';
+  color: #FFF;
+  font-size: 2em;
+  margin-bottom: 1em;
+  text-align:center;
+}
+.section-three__subtitle {
+  font-family: 'Oswald';
+  color: #A59678;
+  margin-bottom: 0.35em;
+}
+.section-three__list {
+  list-style: none;
+  padding: 0;
+}
+.section-three__list-item {
+  padding: .5em 0;
+}
+.section-three__footer > * {
+  margin: 1em 0;
 }
 
 
@@ -252,8 +288,11 @@ header {
     padding-top: 1.5em;
   }
   .section-one__item {
-    width: 25%;
-    margin-bottom: 0;
+    width: 28%;
+    margin-top: 0;
+  }
+  .section-one__item + .section-one__item {
+    margin: 0;
   }
   .section-one__text {
     margin: 1em 0 0 0;
@@ -263,8 +302,18 @@ header {
     width: 32%;
     padding: 2em 1em;
   }
-  .flow {
-    margin: 3em 0;
+  .flow > * {
+    margin: 0;
+  }
+  .section-two__container {
+    margin-bottom: 2em;
+  }
+  .section-three__about {
+    width: 40%;
+    margin-right: 2.5em;
+  }
+  .section-three__text {
+    line-height: 1.4;
   }
 }
 
@@ -273,6 +322,10 @@ header {
   .section-one,
   .section-two {
     padding: 5em 0;
+  }
+
+  .aside {
+    justify-content: flex-start;
   }
 
   .col {
@@ -297,7 +350,7 @@ header {
   }
 
   .flow {
-    width: 40%;
+    width: 45%;
     flex-direction: column;
     margin: 0;
     align-items: flex-end;
@@ -309,8 +362,8 @@ header {
   
   .section-two__card {
     width: 100%;
-    padding: 3em;
     margin-bottom: 1em;
+    padding: 2em;
   }
   
   .section-two__card-title {
@@ -318,5 +371,25 @@ header {
   }
   .section-two__text {
     font-size: .975em;
+  }
+  .section-two__image {
+    margin: 3em 0;
+  }
+  .section-three__title {
+    font-size: 3em;
+  }
+  .section-three__subtitle {
+    font-size: 1.1em;
+  }
+  .section-three__subtitle,
+  .section-three__title {
+    margin-bottom: 1.5em;
+  }
+  .section-three__text,
+  .section-three__list-item {
+    font-size: 0.875em;
+  }
+  .section-three__text {
+    line-height: 1.8;
   }
 }
